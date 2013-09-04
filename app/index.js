@@ -18,13 +18,30 @@ StandaloneUmdGenerator.prototype.askFor = function askFor() {
   // have Yeoman greet the user.
   console.log(this.yeoman);
 
-  var prompts = [{
-    name: 'moduleName',
-    message: 'Would you like to name your module?'
-  }];
+  var prompts = [
+    {
+      name: 'moduleName',
+      message: 'Would you like to name your module?'
+    },
+    {
+      name: 'moduleDescription',
+      message: 'Describe the module?'
+    },
+    {
+      name: 'authorName',
+      message: 'What is your name?'
+    },
+    {
+      name: 'githubUsername',
+      message: 'What is your Github Username?'
+    }
+  ];
 
   this.prompt(prompts, function (props) {
     this.moduleName = props.moduleName;
+    this.moduleDescription = props.moduleDescription;
+    this.authorName = props.authorName;
+    this.githubUsername = props.githubUsername;
     cb();
   }.bind(this));
 };

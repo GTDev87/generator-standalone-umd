@@ -1,10 +1,10 @@
 {
   "name": "<%= _.slugify(moduleName) %>",
-  "description": "library description",
+  "description": "<%= moduleDescription %>",
   "version": "0.0.0",
   "private": false,
   "main": "./src/<%= _.slugify(moduleName) %>.js",
-  "author": "",
+  "author": "<%= authorName %>",
   "keywords": [
     "json"
   ],
@@ -19,6 +19,10 @@
     "grunt-contrib-jasmine": "latest",
     "grunt-template-jasmine-requirejs": "latest",
     "grunt-jasmine-node": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= githubUsername %>/<%= _.slugify(moduleName) %>.git"
   },
   "engines": {
     "node": "*"
